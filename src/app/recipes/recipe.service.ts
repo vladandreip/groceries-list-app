@@ -31,4 +31,12 @@ export class RecipeService {
     // slice retuneaza o noua instanta o copie a array-ului nostru
     return this.recipes.slice();
   }
+
+  addIngredientsToShoppingList(ingredients: Ingredient[]){
+    //this.shoppingListService.addIngredient(ingredients);
+  }
+
+  getRecipe(index: number){
+    return this.recipes[index]
+  }
 }

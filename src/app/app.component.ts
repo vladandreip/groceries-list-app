@@ -19,7 +19,4 @@ export class AppComponent {
   onNavigate(contentSelected: string){
     this.loadedFeature = contentSelected;
   }
-
-
-
 }

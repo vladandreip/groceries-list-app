@@ -9,16 +9,11 @@ import {ShoppingListService} from '../../../shopping-list/shopping-list.service'
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  // @Output() recipeSelected = new EventEmitter<void>();
+  //@Output() recipeSelected = new EventEmitter<void>();
   @Input() recipe: Recipe;
-
-  constructor(private recipeService: RecipeService, private shoppingListService: ShoppingListService) { }
-
+  @Input() index: number;
+  
   ngOnInit() {
   }
 
-  onSelected() {
-    this.recipeService.recipeSelected.emit(this.recipe);
-    this.shoppingListService.publishIngredients(this.recipe.ingredients);
-  }
 }
